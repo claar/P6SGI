@@ -19,17 +19,17 @@ This standard has the following goals:
 
   * Standardize the interface between server and application so that web developers may focus on application development rather than the nuances of supporting each of several server platforms.
 
-  * Keep the interface simple so that a web application or middleware requires no additional tools or libraries other than what exists in a standard Perl 6 environment, no module installations are required.
+  * Keep the interface simple so that a web application or middleware requires no additional tools or libraries other than what exists in a standard Perl 6 environment. No module installations are required.
 
   * Keep the interface simple so that servers and middleware are simple to implement.
 
-  * Allow the interface to flexible enough to accomodate a variety of common use-cases and simple optimzations.
+  * Make the interface flexible enough to accommodate a variety of common use-cases and simple optimizations.
 
   * Provide flexibility so that unanticipated use-cases may be implemented and so that the interface may be extended by servers wishing to do so.
 
   * Allow for backwards compatibility to PSGI applications.
 
-Aside from that is the underlying assumption that this is a simple interface and ought to at least somewhat resemble work in the standards it is derived from, including Rack, WSGI, PSGI, CGI, and others.
+This is intended to be a simple interface resembling the work in the standards it is derived from, including Rack, WSGI, PSGI, CGI, and others.
 
 1 TERMINOLOGY
 =============
@@ -93,7 +93,7 @@ This list is primarily adopted from [PSGI](PSGI).
   <tr>
     <td><code>SCRIPT_NAME</code></td>
     <td><code>Str:D where any('', m{ ^ "/" })</code></td>
-    <td>This is the initial prtion of the URL path that refers to the application.</td>
+    <td>This is the initial portion of the URL path that refers to the application.</td>
   </tr>
   <tr>
     <td><code>PATH_INFO</code></td>
